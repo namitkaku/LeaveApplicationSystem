@@ -14,3 +14,4 @@ mongoose.connect(mongoDB,{useNewUrlParser:true,useUnifiedTopology:true},(error) 
 });
 
 require('./admin');
+require('./users');

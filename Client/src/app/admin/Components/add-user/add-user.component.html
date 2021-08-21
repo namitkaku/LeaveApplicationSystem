@@ -1,0 +1,55 @@
+<form [formGroup]="usersForm" (ngSubmit)="onSubmit()">
+  <div class="panel">
+    <div class="panel-heading">
+      <h3>Add User</h3>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+        <label>Enter Name</label>
+        <input type="text" formControlName="name" class="form-control" name="name">
+      </div>
+      <div class="form-group">
+        <label>Enter Email</label>
+        <input type="email" formControlName="email" class="form-control" name="email">
+      </div>
+      <div class="form-group">
+        <label>Enter Phone</label>
+        <input type="phone" formControlName="phone" class="form-control" name="phone">
+      </div>
+      <div class="form-group">
+        <label>Enter Password</label>
+        <input type="password" formControlName="password" class="form-control" name="password">
+      </div>
+      <div class="form-group">
+        <label>Select Gender:</label>
+        <select name="gender" formControlName="gender" class="form-control">
+          <option selected disabled>Select Gender</option>
+          <option value="1">Male</option>
+          <option value="2">Female</option>
+          <option value="3">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Select Department:</label>
+        <select formControlName="department" name="department" class="form-control">
+          <option selected disabled>Select Department</option>
+          <option value="Technology">Technology</option>
+          <option value="R&D">R&D</option>
+          <option value="HR">HR</option>
+          <option value="Content">Content</option>
+          <option value="Sales & Marketing">Sales & Marketing</option>
+          <option value="Office Help">Office Help</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Enter Address</label>
+        <textarea class="form-control" formControlName="address" placeholder="textarea" name="address" rows="4"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Enter Description</label>
+        <textarea class="form-control" formControlName="description" placeholder="textarea" name="description" rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">+ &nbsp;Add User</button>
+    </div>
+  </div>
+</form>

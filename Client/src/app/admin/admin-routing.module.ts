@@ -6,6 +6,9 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { ListRolesComponent } from './Components/list-roles/list-roles.component';
 import { AddRoleComponent } from './Components/add-role/add-role.component';
 import { ActivateGuard } from './guards/activate.guard';
+import { AddUserComponent } from './Components/add-user/add-user.component';
+import { ListUsersComponent } from './Components/list-users/list-users.component';
+import { EditUserComponent } from './Components/edit-user/edit-user.component';
 
 const routes: Routes = [
   {
@@ -30,6 +33,21 @@ const routes: Routes = [
       {
         path:'add-role',
         component:AddRoleComponent,
+        canActivate:[ActivateGuard]
+      },
+      {
+        path:'add-user',
+        component:AddUserComponent,
+        canActivate:[ActivateGuard]
+      },
+      {
+        path:'list-user',
+        component:ListUsersComponent,
+        canActivate:[ActivateGuard]
+      },
+      {
+        path:'edit-user/:id',
+        component:EditUserComponent,
         canActivate:[ActivateGuard]
       }
     ]
