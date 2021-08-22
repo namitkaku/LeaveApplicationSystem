@@ -15,6 +15,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { AddUserComponent } from './Components/add-user/add-user.component';
 import { ListUsersComponent } from './Components/list-users/list-users.component';
 import { EditUserComponent } from './Components/edit-user/edit-user.component';
+import { ChangePasswordComponent } from './Components/change-password/change-password.component';
+import { MyProfileComponent } from './Components/my-profile/my-profile.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { EditUserComponent } from './Components/edit-user/edit-user.component';
     LoginComponent,
     AddUserComponent,
     ListUsersComponent,
-    EditUserComponent
+    EditUserComponent,
+    ChangePasswordComponent,
+    MyProfileComponent
   ],
   imports: [
     CommonModule,

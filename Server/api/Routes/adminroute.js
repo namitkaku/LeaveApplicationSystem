@@ -11,5 +11,7 @@ module.exports = function(express)
     router.get('/get-user-data/:userid',AdminController.getUserData);
     router.post('/update-user-info/',AdminController.updateUserInfo);
     router.get('/delete-user/:id',AdminController.deleteUser);
+    router.get('/send-credentials/:email',AdminController.sendCredentials);
+    router.post('/change-password',AdminController.changePassword);
     return router;
 }

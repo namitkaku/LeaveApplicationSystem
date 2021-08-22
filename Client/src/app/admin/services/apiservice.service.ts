@@ -42,4 +42,12 @@ export class ApiserviceService {
   {
     return this.http.get(this.baseURL + '/delete-user/' + id);
   }
+  sendCredentialsService(email:String)
+  {
+    return this.http.get(this.baseURL + '/send-credentials/' + email);
+  }
+  changePassword(requestData:any)
+  {
+    return this.http.post(this.baseURL + '/change-password' ,requestData);
+  }
 }

@@ -72,4 +72,18 @@ export class ListUsersComponent implements OnInit {
       return false;
     }
   }
+  sendCredentials(email:String)
+  {
+    this.serviceObject.sendCredentialsService(email).subscribe(response => {
+      console.log(response);
+      if(response['status'] == 200)
+      {
+        this.toastr.success(response['message']);
+      }
+      else
+      {
+        this.toastr.error(response['message'])
+      }
+    })
+  }
 }

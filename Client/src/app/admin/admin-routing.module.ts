@@ -9,6 +9,7 @@ import { ActivateGuard } from './guards/activate.guard';
 import { AddUserComponent } from './Components/add-user/add-user.component';
 import { ListUsersComponent } from './Components/list-users/list-users.component';
 import { EditUserComponent } from './Components/edit-user/edit-user.component';
+import { ChangePasswordComponent } from './Components/change-password/change-password.component';
 
 const routes: Routes = [
   {
@@ -48,6 +49,11 @@ const routes: Routes = [
       {
         path:'edit-user/:id',
         component:EditUserComponent,
+        canActivate:[ActivateGuard]
+      },
+      {
+        path:'change-password',
+        component:ChangePasswordComponent,
         canActivate:[ActivateGuard]
       }
     ]
